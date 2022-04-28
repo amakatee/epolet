@@ -8,8 +8,8 @@ export default async (req, res) => {
         port: 465,
         secure: true,
         auth:{
-            user: 'katziwebb@gmail.com',
-            pass: 'http://localhost:3000/'
+            user: process.env.user,
+            pass: process.env.pass
         }
 
     })
