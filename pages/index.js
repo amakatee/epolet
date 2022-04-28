@@ -19,7 +19,7 @@ export default function Home({products, bannerData}) {
         <div className='product-container'>
           {products.map((product) => <Product  key={product._id} id={product._id} product={product} />)}
         </div>
-        <Product product={product2} />
+        {/* <Product product={product2} /> */}
        </section>
        
        {/* <Product product={secondProd} /> */}
