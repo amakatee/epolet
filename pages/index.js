@@ -3,10 +3,12 @@ import Image from 'next/image'
 import { Navbar, Footer, Layout, Main, Product, Form} from '../components'
 import React from 'react'
 import { client } from '../lib/client'
+import AboutUs from '../components/AboutUs'
+import ProductIcon from '../components/ProductIcon'
 
 
 export default function Home({products, bannerData}) {
-  const product2 = products[1]
+
  
   return (
     <>
@@ -14,10 +16,15 @@ export default function Home({products, bannerData}) {
      <section className='main-section'>
       <Main mainBanner={bannerData.length && bannerData[0]}/>
       </section> 
+      <div className='about-section'>
+        <AboutUs />
+      </div>
 
       <section className='katalog-section'>
-        <div className='product-container'>
-          {products.map((product) => <Product  key={product._id} id={product._id} product={product} />)}
+        <h1 >Каталог</h1>
+        <div className='product-container' id='katalog'>
+          {products?.map(product => <ProductIcon key={product._id} id={product._id} product={product}/>)}
+          {/* {products?.map((product) => <Product  key={product._id} id={product._id} product={product} />)} */}
         </div>
         {/* <Product product={product2} /> */}
        </section>

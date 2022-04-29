@@ -6,7 +6,7 @@ import { useContext } from 'react'
 import CartContext from '../context/StateContext'
 import ProductGridImg from './ProductGridImg'
 
-const Product = ({ id,product:{image, name, details}}) => {
+const Product = ({ id,product:{image, name, details, slug}}) => {
   const { show, setShow, index, setIndex, closeImg} = useContext(CartContext)
   const [idP, setIdP ] = useState(null)
   const existingImg = image.find((item, i) => i === index )
