@@ -30,6 +30,15 @@ const pdf1 = () => {
          </Document>
 
     </div>
+    <div className='pdf2-doc'>
+        <Document file='/assetspdf/recomendation.pdf' onLoadSuccess={onDocumnetSuccessLoad}>
+     
+          <Page className='page-pdf' height='200' pageNumber={1}></Page>
+         
+            
+         </Document>
+
+    </div>
     </div>
   )
 }

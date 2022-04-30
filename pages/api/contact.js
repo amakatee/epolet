@@ -1,7 +1,7 @@
 import nodemailer from 'nodemailer'
 
 export default async (req, res) => {
-    const {Name, Email, Message, Phone } = req.body
+    const {Name, Email, Message, Phone, Agreement } = req.body
     
     const transporter = nodemailer.createTransport({
         host:'smtp.gmail.com',
@@ -24,6 +24,7 @@ export default async (req, res) => {
             <p><strong>Телефон: </strong>${Phone}</p><br />
             <p><strong>Сообщение: </strong>${Message}</p><br />
             <p><strong>Email отправителя: </strong>${Email}</p><br />
+            <p><strong>Отправитель принял условия пользовательского соглашения </strong>${Agreement}</p><br />
             `
         })
         console.group("Message sent", email.messageId)

@@ -4,7 +4,10 @@ import { useForm } from 'react-hook-form'
 import {AiOutlineUser, AiOutlineMail} from 'react-icons/ai'
 import {BsTelephone} from 'react-icons/bs'
 import axios from 'axios'
-import { Grid, TextField , Button, InputAdornment, Typography} from '@mui/material';
+import {  Grid, TextField , Button, InputAdornment, Typography} from '@mui/material';
+import {Checkbox, FormGroup, FormLabel} from '@mui/material'
+import { FormControlLabel } from '@mui/material'
+import Link from 'next/link'
 
 
 
@@ -120,10 +123,36 @@ const Form = () => {
 
           </TextField>
         </Grid>
+        <Grid item>
+        <FormControlLabel
+        label={
+            <div className='labelConf'>
+                <span>Согласен с </span><Link href="confidential"><a className='linktoCong' target="">условиями</a></Link>  <span>обработки персональных данных</span>
+            </div>
+        }
+        control={<Checkbox  
+            color="secondary"
+            name="Agreement"
+           
+            {...register("Agreement", {
+              required: "Обязательно для заполнения*"
+
+            }) }
+            
+            />}
+         
+ >
+
+        </FormControlLabel>
+        <div>{errors.Agreement && <span className='req-form'>{errors.Agreement.message}</span>} </div>
+        </Grid>
         
 
       </Grid>
       <Button  type="submit" color='secondary' sx={{width:"18rem", mt:'2rem', padding:'10px'}}variant="contained"> Отправить сообщение</Button>
+      <Link href='sout'>
+      <Button color='secondary' sx={{width:"18rem", mt:'2rem', fontSize:'1rem'}}>СОУТ</Button>
+      </Link>
      
 
     </form>

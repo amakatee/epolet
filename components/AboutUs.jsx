@@ -10,18 +10,18 @@ const AboutUs = () => {
         <div className='about-child flex'> 
         <div className='about-single-child '>
       
-           <FaAnchor size={50} /> 
+           <FaAnchor size={45} /> 
            <h1>Преимуществo</h1> 
            <h3>Гибкое ценообразование</h3>
         </div>
         <div className='about-single-child'> 
-        <AiOutlineCopyrightCircle size={50} />
+        <AiOutlineCopyrightCircle size={45} />
        
            <h1>Особенность</h1>  
            <h3>Изготовление изделий любой сложности</h3>
         </div>
         <div className='about-single-child'> 
-        <AiFillThunderbolt  size={50}/>
+        <AiFillThunderbolt  size={45}/>
            <h1>Отличительная черта</h1> 
            <h3>Гарантия качества на протяжении 20 лет </h3>
         </div>

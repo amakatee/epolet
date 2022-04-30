@@ -27,7 +27,8 @@ const Navbar = () => {
 
      
         <div id='nav-menu-cont' data-visible={show} className='nav-menu-cont flex'>
-          <div><Link href='./../' aria-hidden="true">Продукция</Link></div>
+        
+          <div><Link href='confidential' aria-hidden="true">Политика Конфиденциальности</Link></div>
           {/* <div><a href='#'>Галерея</a></div>
           <div><a href='#'>Контакты</a></div> */}
         </div>

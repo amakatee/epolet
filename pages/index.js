@@ -36,9 +36,9 @@ export default function Home({products, bannerData}) {
        <Form />
        </div> 
        
-       <div className='pdf-cont'> 
+       {/* <div className='pdf-cont'> 
          <PdfCont />
-       </div>
+       </div> */}
      
      
   

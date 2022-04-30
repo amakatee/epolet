@@ -73,7 +73,9 @@ a {
   background-color: #0000008f;
   z-index: 1;
 }
-
+.product-title {
+    line-height: 1.6rem;
+  }
 
 /* Navar start*/
 .navbar{
@@ -299,6 +301,7 @@ a {
   padding: 3rem;
 
 }
+
 .about-single-child  {
   text-align: center;
   flex: 1;
@@ -310,15 +313,57 @@ a {
   line-height: 1.5rem;
 
 }
+
 .about-single-child h3 {
   font-size: 1.3rem;
   letter-spacing: .5px;
-  font-weight: 300;
+  font-weight: 250;
 }
 
 /* about US ends*/
-
+/*confidentia start  */
+.confidential {
+  text-align: center;
+  padding-top: 25vh;
+  width: 80%;
+  line-height: 1.4rem;
+  letter-spacing: .2px;
+  margin: auto;
+}
+.confidential h3 {
+  margin-bottom: 1rem;
+}
+.labelConf {
+  font-size: .9rem;
+}
+.linktoCong {
+  color: var(--yellow-main);
+  border-bottom:1px solid var(--yellow-main);
+}
+.req-form{
+  font-size: .7rem;
+  color: grey;
+  
+}
+/*condidentikal ends */
 @media(max-width: 35em) {
+  .about-single-child h1{
+    font-size: 1.3rem;
+    letter-spacing: .7px;
+  }
+  .about-single-child h3 {
+    font-size: 1rem;
+    letter-spacing: .7px;
+    font-weight: 300;
+  }
+  .about-child {
+    gap: 5rem;
+  }
+  .about-single-child > * {
+    font-weight: 300;
+    line-height: 1.3rem;
+
+  }
   /*Produc Icon starts */
   .productI-card {
     width: 90vw;
@@ -347,6 +392,8 @@ a {
 }
 .katalog-section h1 {
   color: var(--main-font-color);
+  display: flex;
+  flex-direction: column;
   text-align: center;
   font-size: 2rem;
   margin-left: 1rem;
