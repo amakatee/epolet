@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form'
 import {AiOutlineUser, AiOutlineMail} from 'react-icons/ai'
 import {BsTelephone} from 'react-icons/bs'
 import axios from 'axios'
-import { Grid, TextField , Button, InputAdornment} from '@mui/material';
+import { Grid, TextField , Button, InputAdornment, Typography} from '@mui/material';
 
 
 
@@ -43,8 +43,11 @@ const Form = () => {
   
 
   return (
+  <>
+  <div id='form' className='form-item'>
+    <h1>Напишите нам</h1>
 
-    <form id='form' className="contact-form" onSubmit={handleSubmit(onSubmit)}>
+    <form  className="contact-form" onSubmit={handleSubmit(onSubmit)}>
       <Grid container direction='column' alignItems='center' spacing={3}>
         <Grid item  >
           <TextField
@@ -124,6 +127,8 @@ const Form = () => {
      
 
     </form>
+    </div>
+    </>
  
   )
 }

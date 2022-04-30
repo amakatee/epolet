@@ -41,7 +41,7 @@ const {image, name, details, slug} = product
   return (
     <div className= {slug.current === 'integralnyi-ppu-light' ? 'light product-detail-section' : 'dark product-detail-section'}>
     
-      <div className='product-cart flex'> 
+      <div className='product-cart '> 
      { show && <div onClick={() => closeImg()} className='over-lay'></div>}
         <ProductGridImg tapBack={tapBack} tapForward={tapForward}  image={image} existingImg={existingImg} openImg={openImg}/>
         <div className='products-desc'>
