@@ -2,7 +2,7 @@ import React from 'react'
 import {HiPhone} from 'react-icons/hi'
 import { ImLocation2 } from 'react-icons/im'
 import {SiMinutemailer} from 'react-icons/si'
-import Link from 'react-scroll'
+import Link from 'next/link'
 import { useState } from 'react'
 const Navbar = () => {
   const [show, setShow] = useState(false)
@@ -22,14 +22,14 @@ const Navbar = () => {
     
       <div className='nav-logo-cont flex'>
         <img className='logo-img' width="58px" src='../ep.png'></img>
-        <a href='#'><h3  id='logo'>Эполет</h3></a>
+        <Link href='./../'><h3  id='logo'>Эполет</h3></Link>
       </div>
 
      
         <div id='nav-menu-cont' data-visible={show} className='nav-menu-cont flex'>
-          <div><a href='#' aria-hidden="true">Продукция</a></div>
-          <div><a href='#'>Галерея</a></div>
-          <div><a href='#'>Контакты</a></div>
+          <div><Link href='./../' aria-hidden="true">Продукция</Link></div>
+          {/* <div><a href='#'>Галерея</a></div>
+          <div><a href='#'>Контакты</a></div> */}
         </div>
     <button onClick={(e) => toggleNav()} className='mobile-nav-toggle' aria-controls='nav-menu-cont' aria-expanded={show}><span className='sr-only'></span></button>
      
