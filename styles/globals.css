@@ -691,6 +691,9 @@ a {
    
    
   }
+  .product-title {
+    line-height: 1.6rem;
+  }
  
   .products-grid {
     /* flex: 1 1 40%; */
