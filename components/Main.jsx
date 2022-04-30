@@ -25,7 +25,7 @@ const Main = ({mainBanner}) => {
       </div>
        </div>
        </Link> 
-       <Link to='form' spy={true} smooth={true} duration={500}>
+       <Link to='form' spy={true} offset={-140} smooth={true} duration={500}>
        <div className='h-cont h-cont3'>
       <div className='hexagon hex2'>
         <div className='shape'>Контакты</div>
