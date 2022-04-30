@@ -5,8 +5,9 @@ import {Button} from "@mui/material"
 
 const ProductIcon = ({product:{image, name, details, slug, coverImg}}) => {
   return (
-    <div className='productI-card'>
-       <Link href={`/product/${slug.current}`}>
+    <Link href={`/product/${slug.current}`}>
+      <div className='productI-card'>
+       
         <div className='productI-img' >
             <img src={urlFor(coverImg && coverImg)} width={250}></img>
        </div>
@@ -15,9 +16,10 @@ const ProductIcon = ({product:{image, name, details, slug, coverImg}}) => {
           <p>{`${details.substring(0,50)}...`}</p>
        </div>
    
-    <Button variant='contained'color='secondary'>Подробнее</Button>
+      <Button variant='contained'color='secondary'>Подробнее</Button>
+  
+      </div>
     </Link>
-    </div>
   )
 }
 

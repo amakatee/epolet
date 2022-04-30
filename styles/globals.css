@@ -384,6 +384,7 @@ a {
   max-width: 30rem;
   aspect-ratio: 1.4;
   padding-bottom: 1.3rem;
+  cursor: pointer;
 
 }
 .productI-img img{
@@ -550,6 +551,7 @@ a {
 }
 .file {
   text-align: center;
+  padding-bottom: 2rem;
   
 
 }
@@ -557,6 +559,7 @@ a {
   font-weight: 400;
   letter-spacing: .4px;
   font-size: .8rem;
+ 
 }
 .file > * {
   margin-bottom: 10px;
