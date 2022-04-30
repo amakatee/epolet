@@ -533,6 +533,74 @@ a {
 }
 /* Form Ends */
 
+/* pdf starts */
+.pdf-cont{
+  width: 100vw;
+  min-height: 40vh;
+  text-align: center; 
+
+
+}
+.pdf-files {
+  display: flex;
+  padding-block: 3rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.file {
+  text-align: center;
+  
+
+}
+.file h4 {
+  font-weight: 400;
+  letter-spacing: .4px;
+  font-size: .8rem;
+}
+.file > * {
+  margin-bottom: 10px;
+
+
+}
+
+/*inside pdf page*/
+.p1-con {
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 20vh;
+
+  display: grid;
+  place-content: center;
+}
+.page-pdf {
+  margin-bottom: 3rem;
+  cursor: pointer;
+  transition: all .4s ease;
+  
+
+
+ 
+}
+.page-pdf:hover {
+  transform: scale(2.0);
+}
+@media(max-width:35rem){
+  .p1-con {
+    padding-top: 9vh;
+  }
+  .page-pdf:hover {
+    transform: scale(1.4);
+  }
+
+}
+
+/*pdf ends */
+/* Footer Container starts */
+
+/* Footer Container Ends */
+
+
 @media(min-width:50) and (max-width: 70em) {
   .products-desc {
     flex: 1 1 20%;

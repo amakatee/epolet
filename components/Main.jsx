@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-scroll'
+import PdfCont from './PdfCont'
 
 const Main = ({mainBanner}) => {
   return (
@@ -31,9 +32,11 @@ const Main = ({mainBanner}) => {
       </div>
        </div>
        </Link>
+      
      
      
     </div>
+
     
     </div> 
   )

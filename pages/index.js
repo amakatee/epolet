@@ -5,6 +5,7 @@ import React from 'react'
 import { client } from '../lib/client'
 import AboutUs from '../components/AboutUs'
 import ProductIcon from '../components/ProductIcon'
+import PdfCont from '../components/PdfCont'
 
 
 export default function Home({products, bannerData}) {
@@ -28,11 +29,16 @@ export default function Home({products, bannerData}) {
         </div>
         {/* <Product product={product2} /> */}
        </section>
+
        
-       {/* <Product product={secondProd} /> */}
+  
       <div className='form-cont'>
        <Form />
        </div> 
+       
+       <div className='pdf-cont'> 
+         <PdfCont />
+       </div>
      
      
   
