@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { useContext } from 'react'
 import CartContext from '../context/StateContext'
+import{ Link as L} from 'react-scroll'
 
 
 const Navbar = () => {
@@ -32,10 +33,10 @@ const Navbar = () => {
 
      
         <div id='nav-menu-cont' data-visible={show} className='nav-menu-cont flex'>
-        
+          <div ><Link href='./../'>На главную</Link></div>
           <div><Link href='confidential' aria-hidden="true">Политика Конфиденциальности</Link></div>
-          <div ><a href=''>Галерея</a></div>
-          <div><a href='#'>Контакты</a></div>
+         
+      
         </div>
     <button onClick={(e) => toggleNav()} className='mobile-nav-toggle' aria-controls='nav-menu-cont' aria-expanded={show}><span className='sr-only'></span></button>
      
