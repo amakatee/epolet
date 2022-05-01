@@ -2,6 +2,7 @@ import React from 'react'
 
 const confidental = () => {
   return (
+    <div className='confidential-cont'>
     <div className='confidential'>
       <h3>Политика конфиденциальности</h3>
 <p>Соглашаясь с Условиями работы сайта (далее – Условия) и оставляя свои данные на сайте https://epolet5.ru (далее – Сайт), путем заполнения полей онлайн-заявки.
@@ -48,6 +49,7 @@ const confidental = () => {
 Действующая редакция всегда находится на странице по адресу: https://epolet5.ru/confidential </p>
 
 
+    </div>
     </div>
   )
 }

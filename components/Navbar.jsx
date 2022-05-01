@@ -4,7 +4,12 @@ import { ImLocation2 } from 'react-icons/im'
 import {SiMinutemailer} from 'react-icons/si'
 import Link from 'next/link'
 import { useState } from 'react'
+import { useContext } from 'react'
+import CartContext from '../context/StateContext'
+
+
 const Navbar = () => {
+  const {scrollToElement} = useContext(CartContext)
   const [show, setShow] = useState(false)
   
   const toggleNav = (e) => {
@@ -29,8 +34,8 @@ const Navbar = () => {
         <div id='nav-menu-cont' data-visible={show} className='nav-menu-cont flex'>
         
           <div><Link href='confidential' aria-hidden="true">Политика Конфиденциальности</Link></div>
-          {/* <div><a href='#'>Галерея</a></div>
-          <div><a href='#'>Контакты</a></div> */}
+          <div ><a href=''>Галерея</a></div>
+          <div><a href='#'>Контакты</a></div>
         </div>
     <button onClick={(e) => toggleNav()} className='mobile-nav-toggle' aria-controls='nav-menu-cont' aria-expanded={show}><span className='sr-only'></span></button>
      

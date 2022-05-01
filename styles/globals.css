@@ -18,6 +18,7 @@ html {
   --yellow-main: #ffca28;
 
 }
+
 .dark {
   
   background-color: #000000;
@@ -322,13 +323,22 @@ a {
 
 /* about US ends*/
 /*confidentia start  */
+.confidential-cont {
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  width: 100vw;
+
+}
 .confidential {
-  text-align: center;
+  text-align: start;
   padding-top: 25vh;
   width: 80%;
   line-height: 1.4rem;
   letter-spacing: .2px;
   margin: auto;
+ padding-bottom: 3rem;
+ color: var(--main-font-color);
+
 }
 .confidential h3 {
   margin-bottom: 1rem;
@@ -649,7 +659,7 @@ a {
 /* Footer Container starts */
 footer {
   background-color: #2d3436;
-background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+background-image: linear-gradient(360deg, #2d3436 0%, #000000 74%);
 }
 .footer-container {
   display: grid;
@@ -664,10 +674,12 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
   display: flex;
   flex-direction: column;
   gap: 15px;
+  text-align: start;
   color: var(--main-font-color);
 }
-.footer-img {
+.footer-map{
   display: grid;
+
   place-content: center;
 }
 /* Footer Container Ends */
@@ -707,6 +719,18 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
   }
 }
 @media(max-width:50em) {
+  .footer-container { 
+    margin-top: -3px;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+   text-align: center;
+  
+  } 
   .sr-only {
     position: absolute;
     margin: -1px 0 0 -1px;
@@ -768,6 +792,12 @@ background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
     padding-top: 1rem;
   
   }
+  .nav-main-cont a {
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+
+  }
+
+
  
   .nav-logo-cont {
    align-items: center;

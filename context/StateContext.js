@@ -1,5 +1,7 @@
 import React, {createContext, useContext, useState, useEffect} from "react";
 
+import Link from 'next/link'
+
 const CartContext = createContext()
 
 export const StateContext = ({children}) => {
@@ -12,7 +14,10 @@ export const StateContext = ({children}) => {
         setShow(false)
     
       }
-      
+    const scrollToElement = (s) => {
+        <Link href='/'></Link>
+
+    }
 
     return (
         <CartContext.Provider
@@ -21,7 +26,8 @@ export const StateContext = ({children}) => {
             setShow,
             index,
             setIndex,
-            closeImg
+            closeImg,
+            scrollToElement
         }}
     
         >{children}</CartContext.Provider>

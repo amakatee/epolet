@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Navbar, Footer, Layout, Main, Product, Form} from '../components'
+import { Navbar, Footer, Layout, Main, Product} from '../components'
 import React from 'react'
 import { client } from '../lib/client'
 import AboutUs from '../components/AboutUs'
@@ -32,9 +32,9 @@ export default function Home({products, bannerData}) {
 
        
   
-      <div className='form-cont'>
+      {/* <div className='form-cont'>
        <Form />
-       </div> 
+       </div>  */}
        
        {/* <div className='pdf-cont'> 
          <PdfCont />
