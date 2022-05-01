@@ -24,7 +24,7 @@ const Form = () => {
     alert(JSON.stringify(values))
     let config = {
       method: 'post',
-      url:`${process.env.NEXT_PUBLIC_URL}api/contact`,
+      url:`api/contact`,
       headers: {
         'Content-type':'application/json'
       },
