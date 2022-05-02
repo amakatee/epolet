@@ -283,6 +283,9 @@ a {
 }
 
 @media(max-width: 767px) {
+  .main-section {
+    height: 100%;
+  }
   .about-section {
    
     z-index: 40;
