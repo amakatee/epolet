@@ -25,6 +25,18 @@ export default {
             
         },
         {
+          name: 'aboutsection',
+          title: 'О компании заголовок',
+          description: 'Заголовок для секции о компании',
+          type: 'string'
+        },
+        {
+          name: 'katalogsection',
+          title: 'Каталог заголовок',
+          description: 'Заголовок для Католога',
+          type: 'string'
+        },
+        {
             name: 'aboutArray',
             title: 'Изменить',
             description:'Текст О Компании',

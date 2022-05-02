@@ -167,6 +167,9 @@ const Form = () => {
       <Link href='sout'>
       <Button color='secondary' sx={{width:"18rem", mt:'2rem', fontSize:'1rem'}}>СОУТ</Button>
       </Link>
+      <Link href='confidential'>
+      <Button color='secondary' sx={{width:"18rem", mt:'2rem', fontSize:'1rem'}}>Политика Конфиденциальности</Button>
+      </Link>
      
 
     </form>

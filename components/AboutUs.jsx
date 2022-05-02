@@ -9,7 +9,7 @@ const AboutUs = ({aboutBanner}) => {
   return (
   
     <div className='about flex' id='about' >
-        <h1 className='about-title'>О Компании </h1> 
+        <h1 className='about-title'>{aboutBanner.aboutsection} </h1> 
         <div className='about-child flex'> 
         <div className='about-single-child '>
       

@@ -16,9 +16,8 @@ const Footer = () => {
     <>
     <div className='footer-container'>
       <div className='footer-map'>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8917.63961575856!2d35.488728094063845!3d56.02889124004799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46ca09664b8741bd%3A0xe4c839d5d6a10304!2sEpolet!5e0!3m2!1sen!2sru!4v1651418085413!5m2!1sen!2sru"
-      
-      width="360" height="250"   allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+
+<iframe src="https://yandex.ru/map-widget/v1/-/CCUFFKVwxC" width="360" height="290" frameborder="1" allowfullscreen="true" ></iframe>
   
       </div>
       <div className='footer-contact'>

@@ -2,11 +2,11 @@ import React from 'react'
 import {HiPhone} from 'react-icons/hi'
 import { ImLocation2 } from 'react-icons/im'
 import {SiMinutemailer} from 'react-icons/si'
-import Link from 'next/link'
+
 import { useState } from 'react'
 import { useContext } from 'react'
 import CartContext from '../context/StateContext'
-import{ Link as L} from 'react-scroll'
+import{ Link } from 'react-scroll'
 import { client } from '../lib/client'
 
 
@@ -35,8 +35,9 @@ const Navbar = () => {
 
      
         <div id='nav-menu-cont' data-visible={show} className='nav-menu-cont flex'>
-          <div ><Link href='./../'>На главную</Link></div>
-          <div><Link href='confidential' aria-hidden="true">Политика Конфиденциальности</Link></div>
+          <div ><Link to='katalog' spy={true}  offset={-150} smooth={true} duration={500}>Каталог</Link></div>
+          <div><Link to='about' spy={true} smooth={true} duration={500} offset={-150} aria-hidden="true">О Компании</Link></div>
+          <div><Link to='form'  spy={true} offset={-140} smooth={true} duration={500} aria-hidden="true">Контакты</Link></div>
          
       
         </div>

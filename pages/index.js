@@ -22,7 +22,7 @@ export default function Home({products, bannerData}) {
       </div>
 
       <section className='katalog-section'>
-        <h1 >Каталог</h1>
+        <h1 >{bannerData.length && bannerData[0].katalogsection || 'Каталог'}</h1>
         <div className='product-container' id='katalog'>
           {products?.map(product => <ProductIcon key={product._id} id={product._id} product={product}/>)}
          

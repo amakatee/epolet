@@ -155,7 +155,7 @@ a {
 
  height: 100vh;
   background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  /* background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
 }
 
 .main-page {
@@ -778,7 +778,14 @@ background-image: linear-gradient(360deg, #2d3436 0%, #000000 74%);
 }
 /* Footer Container Ends */
 
-
+@media(min-width: 35em) {
+  .main-container{
+    display: none;
+  }
+  .main-desc {
+    padding-top: 20vh;
+  }
+}
 @media(min-width:50) and (max-width: 70em) {
   .products-desc {
     flex: 1 1 20%;
@@ -1087,4 +1094,19 @@ html{
   width: 100vw;
   background-color: rgba(54, 54, 54, 0.034);
   height: 100vh;
+}
+
+.not-found {
+  height: 80vh;
+  width: 100vw;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  background-color: var(--main-font-color);
+}
+.not-found  h1 {
+  font-weight: 300;
+
+  letter-spacing: .4px;
+
 }
