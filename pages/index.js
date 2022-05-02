@@ -18,27 +18,18 @@ export default function Home({products, bannerData}) {
       <Main mainBanner={bannerData.length && bannerData[0]}/>
       </section> 
       <div className='about-section'>
-        <AboutUs />
+        <AboutUs aboutBanner={bannerData.length && bannerData[0]}/>
       </div>
 
       <section className='katalog-section'>
         <h1 >Каталог</h1>
         <div className='product-container' id='katalog'>
           {products?.map(product => <ProductIcon key={product._id} id={product._id} product={product}/>)}
-          {/* {products?.map((product) => <Product  key={product._id} id={product._id} product={product} />)} */}
+         
         </div>
-        {/* <Product product={product2} /> */}
+       
        </section>
 
-       
-  
-      {/* <div className='form-cont'>
-       <Form />
-       </div>  */}
-       
-       {/* <div className='pdf-cont'> 
-         <PdfCont />
-       </div> */}
      
      
   

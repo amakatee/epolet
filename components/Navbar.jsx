@@ -7,11 +7,13 @@ import { useState } from 'react'
 import { useContext } from 'react'
 import CartContext from '../context/StateContext'
 import{ Link as L} from 'react-scroll'
+import { client } from '../lib/client'
 
 
 const Navbar = () => {
   const {scrollToElement} = useContext(CartContext)
   const [show, setShow] = useState(false)
+
   
   const toggleNav = (e) => {
     setShow(show => !show)

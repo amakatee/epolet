@@ -5,7 +5,6 @@ export default {
     fields: [
         {
             name: 'image',
-            title: 'Изображение',
             type: 'image',
             options: {
                 hotspot: true,
@@ -14,13 +13,60 @@ export default {
         },
         {
             name: 'title',
-            title: 'Загаловок',
+            title: 'Текст на главной',
+            description:'(белый)',
             type: 'string'
         },
         {
-            name: 'details',
-            title:'Детали',
+            name: 'maindetails',
+            title:'Текст на главной',
+            description:'(желтый)',
             type: 'string'
-        }
+            
+        },
+        {
+            name: 'aboutArray',
+            title: 'Изменить',
+            description:'Текст О Компании',
+            type: 'array',
+            of: [ {
+                type: 'object',
+                name: 'about',
+               
+                fields: [
+                  {
+                    title: 'Заголовок',
+                    name: 'titles',
+                    type: 'string',
+                   
+                  },
+                  {
+                    title: 'Описание',
+                    name: 'description',
+                    type: 'string',
+                   
+                  }
+                ]
+              }]
+        },
+        // {
+        //     type: 'object',
+        //     name: 'about',
+           
+        //     fields: [
+        //       {
+        //         title: 'Заголовок',
+        //         name: 'titles',
+        //         type: 'string',
+               
+        //       },
+        //       {
+        //         title: 'Описание',
+        //         name: 'description',
+        //         type: 'string',
+               
+        //       }
+        //     ]
+        //   }
     ]
 }

@@ -1,13 +1,18 @@
 import React from 'react'
 import { Link } from 'react-scroll'
 import PdfCont from './PdfCont'
+import { urlFor } from '../lib/client'
+import { useState } from 'react'
 
 const Main = ({mainBanner}) => {
+
+
+  console.log(mainBanner.details)
   return (
     <div className='main-page'>
       <div className='main-desc'>
-       <h2>Производство пенополиуретановых изделий для Вас!</h2>
-        <p>Наша фирма - лидер на рынке в своей области! </p >
+       <h2>{mainBanner.title}</h2>
+        <p>{mainBanner.maindetails} </p >
      </div>
     <div className='main-container'>
      
@@ -36,8 +41,13 @@ const Main = ({mainBanner}) => {
      
      
     </div>
-     <img  className='main-image-cont' src='https://i.pinimg.com/564x/34/46/fc/3446fc9ded407897153dd8501a729d23.jpg'></img>
+    {mainBanner?.image  && 
+    
+    <div>
+    <img  className='main-image-cont' src={urlFor(mainBanner.image)}></img>
      <div className=' main-img-overlay'> </div>
+     </div>  } 
+   
     
     </div> 
   )
