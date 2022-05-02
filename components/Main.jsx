@@ -43,7 +43,7 @@ const Main = ({mainBanner}) => {
     </div>
     {mainBanner?.image  && 
     
-    <div>
+    <div className='image-container-div'>
     <img  className='main-image-cont' src={urlFor(mainBanner.image)}></img>
      <div className=' main-img-overlay'> </div>
      </div>  } 
