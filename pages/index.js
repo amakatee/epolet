@@ -14,7 +14,7 @@ export default function Home({products, bannerData}) {
   return (
     <>
     
-     <section className='main-section'>
+     <section className='main-section' >
       <Main mainBanner={bannerData.length && bannerData[0]}/>
       </section> 
       <div className='about-section'>
