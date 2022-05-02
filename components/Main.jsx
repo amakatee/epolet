@@ -36,7 +36,8 @@ const Main = ({mainBanner}) => {
      
      
     </div>
-
+     <img  className='main-image-cont' src='https://i.pinimg.com/564x/34/46/fc/3446fc9ded407897153dd8501a729d23.jpg'></img>
+     <div className=' main-img-overlay'> </div>
     
     </div> 
   )

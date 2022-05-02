@@ -31,7 +31,7 @@ const Form = () => {
     
     let config = {
       method: 'post',
-      url:`http://localhost:3000//api/contact/`,
+      url:`/api/contact/`,
       headers: {
         'Content-type':'application/json'
       },
