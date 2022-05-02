@@ -8,10 +8,15 @@ import {  Grid, TextField , Button, InputAdornment, Typography} from '@mui/mater
 import {Checkbox, FormGroup, FormLabel} from '@mui/material'
 import { FormControlLabel } from '@mui/material'
 import Link from 'next/link'
+import { useState } from 'react'
 
 
 
 const Form = () => {
+  const [show, setShow] = useState(false)
+  const [overlay, setOverlay] = useState(false)
+
+
   const {
     register,
     formState: {
@@ -21,10 +26,12 @@ const Form = () => {
   } = useForm()
 
  async function onSubmit(values) {
-    alert(JSON.stringify(values))
+    setShow(true)
+    setOverlay(true)
+    
     let config = {
       method: 'post',
-      url:`api/contact`,
+      url:`http://localhost:3000//api/contact/`,
       headers: {
         'Content-type':'application/json'
       },
@@ -34,7 +41,8 @@ const Form = () => {
     try {
        const response = await axios(config)
        if(response.data.status == 200) {
-         console.log("success")
+  
+       
        }
       
   
@@ -43,6 +51,11 @@ const Form = () => {
     }
   }
   
+  const closingOnClick = () => {
+    setShow(false)
+    setOverlay(false)
+
+}
   
 
   return (
@@ -157,6 +170,9 @@ const Form = () => {
 
     </form>
     </div>
+
+   {show &&  <div className='success-mes'>Спасибо за обращение! <br /> Мы скоро с вами свяжемся!</div>}
+  {overlay && <div onClick={() => closingOnClick()} className='form-overlay'></div>} 
     </>
  
   )

@@ -981,3 +981,26 @@ background-image: linear-gradient(360deg, #2d3436 0%, #000000 74%);
 html{
   width: 100vw;
 }
+.success-mes {
+  width: 40vw;
+  height: 20vh;
+  background-color: var(--yellow-main);
+  border-radius: 2rem;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 50;
+  display: grid;
+  place-content: center;
+  text-align: center;
+}
+.form-overlay {
+  position: fixed;
+  z-index: 49;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: rgba(54, 54, 54, 0.034);
+  height: 100vh;
+}
