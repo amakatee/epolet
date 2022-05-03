@@ -22,7 +22,8 @@ const Form = () => {
     formState: {
       errors
     },
-    handleSubmit
+    handleSubmit,
+    reset
   } = useForm()
 
  async function onSubmit(values) {
@@ -40,10 +41,8 @@ const Form = () => {
     }
     try {
        const response = await axios(config)
-       if(response.data.status == 200) {
-       
-  
-       
+       if(response.status == 200) {
+          reset()
        }
       
   
@@ -163,7 +162,7 @@ const Form = () => {
         
 
       </Grid>
-      <Button  type="submit" color='secondary' sx={{width:"18rem", mt:'2rem', padding:'10px'}}variant="contained"> Отправить сообщение</Button>
+      <Button   type="submit" color='secondary' sx={{width:"18rem", mt:'2rem', padding:'10px'}}variant="contained"> Отправить сообщение</Button>
       <Link href='sout'>
       <Button color='secondary' sx={{width:"18rem", mt:'2rem', fontSize:'1rem'}}>СОУТ</Button>
       </Link>

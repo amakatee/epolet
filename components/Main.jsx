@@ -3,6 +3,7 @@ import { Link } from 'react-scroll'
 import PdfCont from './PdfCont'
 import { urlFor } from '../lib/client'
 import { useState } from 'react'
+import {motion} from 'framer-motion'
 
 const Main = ({mainBanner}) => {
 
@@ -11,8 +12,26 @@ const Main = ({mainBanner}) => {
   return (
     <div className='main-page' id='main'>
       <div className='main-desc'>
-       <h2>{mainBanner.title}</h2>
-        <p>{mainBanner.maindetails} </p >
+       <motion.h2 initial={{y:"-50%", opacity:0}}
+        animate={{
+         y: "0%",
+         opacity:1
+       }}
+       transition={{
+         duration: .6
+       }}
+       >{mainBanner.title}</motion.h2>
+        <motion.p
+         initial={{y:"-50%", opacity:0}}
+         animate={{
+          y: "0%",
+          opacity:1
+        }}
+        transition={{
+         
+          delay:.5,
+          duration: .6
+        }}>{mainBanner.maindetails} </motion.p >
      </div>
     <div className='main-container'>
      
@@ -44,7 +63,17 @@ const Main = ({mainBanner}) => {
     {mainBanner?.image  && 
     
     <div className='image-container-div'>
-    <img  className='main-image-cont' src={urlFor(mainBanner.image)}></img>
+    <motion.img  initial={{scale:1}}
+         animate={{
+          scale: 1.1,
+        }}
+        transition={{
+          duration: 7,
+          repeat: Infinity,
+          repeatDelay: .3,
+          repeatType: 'reverse'
+        }}
+         className='main-image-cont' src={urlFor(mainBanner.image)}></motion.img>
      <div className=' main-img-overlay'> </div>
      </div>  } 
    

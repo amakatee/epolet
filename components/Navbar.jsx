@@ -31,10 +31,10 @@ const Navbar = () => {
 
        <div className='nav-main-cont flex'>
     
-      <div className='nav-logo-cont flex'>
+      <div onClick={() => {router.push('/')}} className='nav-logo-cont flex'>
         <img className='logo-img' width="58px" src='../ep.png'></img>
         {/* <Link to='main'><h3  id='logo'>Эполет</h3></Link> */}
-        <h3 onClick={() => {router.push('/')}} id='logo'>Эполет</h3>
+        <h3  id='logo'>Эполет</h3>
       
         {/* <div id='logo'><EpoletLink /></div>  */}
       </div>
