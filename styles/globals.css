@@ -324,9 +324,9 @@ a {
 
 }
 .about-child{
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ 
   gap: 8rem;
   padding: 3rem;
   z-index: 40;
@@ -360,6 +360,7 @@ a {
   line-height: 1.6rem;
   letter-spacing: .5px;
   font-weight: 250;
+ 
 }
 .about-title {
   color: var(--main-font-color);
@@ -1067,14 +1068,22 @@ html{
     font-size: 1rem;
     letter-spacing: .7px;
     font-weight: 300;
+    text-align: center;
   }
-  .about-child {
-    gap: 5rem;
-  }
+ 
   .about-single-child > * {
     font-weight: 300;
     line-height: 1.3rem;
 
+  }
+  .about-child{
+    display: grid;
+    grid-template-columns: 1fr;
+   
+    gap: 5rem;
+    padding: 3rem;
+    z-index: 40;
+  
   }
   /*Produc Icon starts */
   .productI-card {
@@ -1176,8 +1185,6 @@ html{
    
     height: 100vh;
     padding-top: 20vh;
-    
-  
     z-index: 15;
    
    
