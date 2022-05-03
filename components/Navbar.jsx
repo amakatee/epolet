@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className='nav-contact flex'>
         <p> <HiPhone /> <span className='left-padding'> +7(916)003-28-81</span>  </p>
         <p> <ImLocation2 /> <span className='left-padding'>Московская Область, пгт. Шаховская, Волочановское шоссе дом 6А </span></p>
-        <p> <SiMinutemailer /> <span className='left-padding'>epolet5@mail.ru</span></p>
+        <p> <SiMinutemailer /> <span className='left-padding'>partner@epolet5.ru</span></p>
       </div>
 
        <div className='nav-main-cont flex'>

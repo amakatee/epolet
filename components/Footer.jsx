@@ -26,7 +26,7 @@ const Footer = () => {
         <p> <HiPhone /> <span className='left-padding'> +7(916)003-28-81</span>  </p>
         {/* <Link href='https://goo.gl/maps/koZqKMwKgouDyT6T7'><a target='_blank'> <p className='border-bottom'> <ImLocation2 /> <span className='left-padding'>Московская Область, пгт. Шаховская, Волочановское шоссе дом 6А </span></p></a></Link> */}
       
-        <p> <SiMinutemailer /> <span className='left-padding'>epolet5@mail.ru</span></p>
+        <p> <SiMinutemailer /> <span className='left-padding'>partner@epolet5.ru</span></p>
 
 
       

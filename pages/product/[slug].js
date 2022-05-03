@@ -44,7 +44,7 @@ const {image, name, details, slug} = product
       <Head>
         <title> {name} - Эполет</title>
         <meta name='description' content={details}></meta>
-        <meta property='og:title' content={`${name} - Эполет`}></meta>
+        <meta property='og:title' content={`${name} ППУ - Эполет`}></meta>
       </Head>
     
       <div className='product-cart '> 
