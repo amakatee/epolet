@@ -170,10 +170,15 @@ a {
   margin: auto;
   display: grid;
   place-content: center;
-  grid-template-rows:  1fr 6fr;
+  height: 100vh;
+  
+
+
+  
+
   z-index: 15;
  
-  padding-top: 25vh;
+ 
 }
 .image-container-div {
   position: absolute;
@@ -214,8 +219,11 @@ a {
 
 
 .main-desc {
-  display: grid;
-  place-content: center;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
   color: var(--main-font-color);
   text-align: center;
   line-height: 1.7rem;
@@ -243,17 +251,7 @@ a {
   
   
 }
-.main-container{
-  /* background-color: blue; */
- position: relative;
-  /* top: 20%;
-  width: 50%;
-  height: 60vh; */
-  transform: scale(.4);
-  z-index: 15;
-  
-  
-}
+
 .h-cont {
   position: relative;
   display: flex;
@@ -1099,9 +1097,7 @@ html{
   .main-container{
     display: none;
   }
-  .main-desc {
-    padding-top: 20vh;
-  }
+ 
   .carousel-close-button {
     position: absolute;
     width: 3rem;
@@ -1170,6 +1166,59 @@ html{
     width: 90vw;
     margin: auto;
   }
+  .main-page {
+  
+    width: 90%;
+    margin: auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   
+    height: 100vh;
+    padding-top: 20vh;
+    
+  
+    z-index: 15;
+   
+   
+  }
+  .main-desc {
+    text-align: center;
+    
+    font-size: .7rem;
+   
+    width: 80vw;
+    margin-inline: auto;
+    color: var(--main-font-color);
+    text-align: center;
+    line-height: 1.7rem;
+    letter-spacing: .5px;
+    font-weight: 200;
+    font-size: 1rem;
+  
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               0px 18px 23px rgba(0,0,0,0.1);
+    
+    gap: 1rem;
+    z-index: 15;
+  }
+  .main-desc h2{
+    
+    font-size: 1.2rem;
+  }
+  .main-container{
+    margin-top: -10vh;
+   width: 740px;
+   height: 702px;
+  
+   top: 0;
+
+    transform: scale(.3);
+    z-index: 15;
+    
+    
+  }
 /* Product Icon ends */
 
   
@@ -1178,7 +1227,7 @@ html{
 @media(max-width: 767px) {
   .main-section {
 
-    height: 100%;
+    height: 100vh;
     z-index: 3;
    
    
@@ -1187,31 +1236,16 @@ html{
      z-index: 40;
   
   }
-  .main-page {
-    width: 80%;
-    margin: auto;
-    display: grid;
-    place-content: center;
-    grid-template-rows:  1fr 2fr;
-    padding-top: 20vh;
-  
-  }
+
   .main-desc  {
     text-align: center;
-    padding-inline: 3rem;
+
     font-size: .7rem
    
    
-  }
-  .main-desc p {
+  } 
+   .main-desc p {
     font-size: 0.9rem;
-  }
-  .main-container {
-   transform: scale(.34);
-   margin-top: -3rem;
-   margin-right: 55%;
-   
-   
   }
   
 
