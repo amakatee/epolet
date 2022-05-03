@@ -9,7 +9,7 @@ const Main = ({mainBanner}) => {
 
   console.log(mainBanner.details)
   return (
-    <div className='main-page'>
+    <div className='main-page' id='main'>
       <div className='main-desc'>
        <h2>{mainBanner.title}</h2>
         <p>{mainBanner.maindetails} </p >

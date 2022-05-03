@@ -7,6 +7,7 @@ body {
 }
 html {
   scroll-behavior: smooth;
+ 
   
 }
 ::selection{
@@ -31,7 +32,11 @@ html {
 
 }
 
+html{
+  overflow-x: hidden;
+  width: 100vw;
 
+}
 
 
 a {
@@ -140,6 +145,7 @@ a {
 }
 .nav-menu-cont > * {
   padding-left: 2.5rem;
+  cursor: pointer;
 }
 .nav-menu-cont > * a {
   color: var(--main-font-color);
@@ -152,9 +158,10 @@ a {
 /* Main start */
 .main-section {
   width: 100vw;
-
- height: 100vh;
+ overflow: hidden;
+  height: 100vh;
   background-color: #000000;
+
   /* background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); */
 }
 
@@ -178,7 +185,19 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
   z-index:1;
+  animation-delay: .3s;
+  animation-name:  scale-main;
+  animation-duration: 7s;
+  animation-timing-function: liniar;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  overflow: hidden;
+  
+
+
+ 
  
 
 }
@@ -192,6 +211,30 @@ a {
   width: 100%;
   height: 100%;
   z-index: 2;
+  /* animation-name:  scale-main;
+  animation-duration: 6s;
+  animation-timing-function: liniar;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; */
+  
+
+}
+/* .image-container-div {
+ 
+
+} */
+@keyframes scale-main{
+  0%{
+    transform: scale(1.0);
+    
+
+  }50%{
+    transform: scale(1.07);
+
+  } 100%{
+    transform: scale(1.0);
+
+  }
 }
 .main-desc {
   display: flex;
@@ -211,6 +254,9 @@ a {
   
   gap: 1rem;
   z-index: 15;
+}
+.main-desc h2{
+  margin-bottom: .5rem;
 }
 
 .main-desc p{
@@ -284,11 +330,14 @@ a {
 
 @media(max-width: 767px) {
   .main-section {
+
     height: 100%;
+    z-index: 3;
+   
+   
   }
   .about-section {
-   
-    z-index: 40;
+     z-index: 40;
   
   }
   .main-page {
@@ -297,10 +346,8 @@ a {
     display: grid;
     place-content: center;
     grid-template-rows:  1fr 2fr;
-   
-   
-   
     padding-top: 20vh;
+  
   }
   .main-desc  {
     text-align: center;
@@ -354,15 +401,17 @@ a {
 
 /* about US starts*/
 .about-section {
+  position: relative;
   padding-block: 3rem;
   background: black;
   min-height: 80vh;
   display: grid;
   place-content: center;
-  z-index: 40;
+  z-index: 300;
 
 }
 .about {
+ 
   flex-direction: column;
   align-items: center;
   width: 80vw;
@@ -779,6 +828,9 @@ background-image: linear-gradient(360deg, #2d3436 0%, #000000 74%);
 /* Footer Container Ends */
 
 @media(min-width: 35em) {
+  html {
+    overflow-x: hidden;
+  }
   .main-container{
     display: none;
   }
@@ -787,6 +839,9 @@ background-image: linear-gradient(360deg, #2d3436 0%, #000000 74%);
   }
 }
 @media(min-width:50) and (max-width: 70em) {
+  html {
+    overflow-x: hidden;
+  }
   .products-desc {
     flex: 1 1 20%;
     display: grid;
@@ -820,6 +875,9 @@ background-image: linear-gradient(360deg, #2d3436 0%, #000000 74%);
   }
 }
 @media(max-width:50em) {
+  html {
+    overflow-x: hidden;
+  }
   .footer-container { 
     margin-top: -3px;
     grid-template-columns: 1fr;

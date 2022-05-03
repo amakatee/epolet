@@ -1,8 +1,13 @@
 import React from 'react'
+import {Button} from '@mui/material'
+import Link from 'next/link'
 
 const confidental = () => {
   return (
+
     <div className='confidential-cont'>
+      
+     
     <div className='confidential'>
       <h3>Политика конфиденциальности</h3>
 <p>Соглашаясь с Условиями работы сайта (далее – Условия) и оставляя свои данные на сайте https://epolet5.ru (далее – Сайт), путем заполнения полей онлайн-заявки.

@@ -8,10 +8,13 @@ import { useContext } from 'react'
 import CartContext from '../context/StateContext'
 import{ Link } from 'react-scroll'
 import { client } from '../lib/client'
+import {useRouter } from 'next/router'
+
 
 
 const Navbar = () => {
   const {scrollToElement} = useContext(CartContext)
+  const router = useRouter()
   const [show, setShow] = useState(false)
 
   
@@ -30,7 +33,10 @@ const Navbar = () => {
     
       <div className='nav-logo-cont flex'>
         <img className='logo-img' width="58px" src='../ep.png'></img>
-        <Link href='./../'><h3  id='logo'>Эполет</h3></Link>
+        {/* <Link to='main'><h3  id='logo'>Эполет</h3></Link> */}
+        <h3 onClick={() => {router.push('/')}} id='logo'>Эполет</h3>
+      
+        {/* <div id='logo'><EpoletLink /></div>  */}
       </div>
 
      
