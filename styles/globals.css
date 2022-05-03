@@ -1046,6 +1046,9 @@ html{
   .footer-contact p {
     font-size: .8rem;
   }
+ /* .productI-card {
+   margin-bottom: 4rem;
+ } */
   
 }
 @media(max-width:35rem){
@@ -1089,6 +1092,7 @@ html{
   .productI-card {
     width: 90vw;
     margin: auto;
+    
   }
 /* Product Icon ends */
 
@@ -1174,6 +1178,9 @@ html{
   .productI-card {
     width: 90vw;
     margin: auto;
+  }
+  .product-container {
+    gap: 4rem;
   }
   .main-page {
   
