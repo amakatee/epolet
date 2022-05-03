@@ -18,6 +18,7 @@ const Footer = () => {
       <div className='footer-map'>
 
 <iframe src="https://yandex.ru/map-widget/v1/-/CCUFFKVwxC" width="360" height="290" frameborder="1" allowfullscreen="true" ></iframe>
+<p> <ImLocation2  color="white"/> <span className=' footer-map-address '>Московская Область, пгт. Шаховская, Волочановское шоссе дом 6А </span></p>
   
       </div>
       <div className='footer-contact'>

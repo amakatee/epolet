@@ -5,7 +5,7 @@ import CartContext from '../context/StateContext'
 import {MdArrowForwardIos, MdArrowBackIosNew} from 'react-icons/md'
 
 const ProductGridImg = ({image, existingImg, tapBack, tapForward, openImg}) => {
-  const { show} = useContext(CartContext)
+  const { show, closeImg} = useContext(CartContext)
   return (
     <>
      <div className='products-grid'>
@@ -19,9 +19,11 @@ const ProductGridImg = ({image, existingImg, tapBack, tapForward, openImg}) => {
           )
         })}
        { show && <div className='product-carousel'>
+         <button onClick={() => closeImg()}  className='carousel-close-button'></button>
         <MdArrowBackIosNew className='arrowBack' onClick={() => tapBack()} color='#fefefa' 
         
          size={40} />
+
          <div className='product-carous-cont'>
       
             <img width="60px" src={urlFor(existingImg)}></img>

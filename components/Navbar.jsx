@@ -41,9 +41,9 @@ const Navbar = () => {
 
      
         <div id='nav-menu-cont' data-visible={show} className='nav-menu-cont flex'>
-          <div ><Link to='katalog' spy={true}  offset={-150} smooth={true} duration={500}>Каталог</Link></div>
-          <div><Link to='about' spy={true} smooth={true} duration={500} offset={-150} aria-hidden="true">О Компании</Link></div>
-          <div><Link to='form'  spy={true} offset={-140} smooth={true} duration={500} aria-hidden="true">Контакты</Link></div>
+          <div onClick={() => {router.push('/')}} ><Link to='katalog' spy={true}  offset={-150} smooth={true} duration={500}>Каталог</Link></div>
+          <div onClick={() => {router.push('/')}} ><Link to='about' spy={true} smooth={true} duration={500} offset={-150} aria-hidden="true">О Компании</Link></div>
+          <div onClick={() => {router.push('/')}} ><Link to='form'  spy={true} offset={-140} smooth={true} duration={500} aria-hidden="true">Контакты</Link></div>
          
       
         </div>
