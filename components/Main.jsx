@@ -12,26 +12,8 @@ const Main = ({mainBanner}) => {
   return (
     <div className='main-page' id='main'>
       <div className='main-desc'>
-       <motion.h2 initial={{y:"-50%", opacity:0}}
-        animate={{
-         y: "0%",
-         opacity:1
-       }}
-       transition={{
-         duration: .6
-       }}
-       >{mainBanner.title}</motion.h2>
-        <motion.p
-         initial={{y:"-50%", opacity:0}}
-         animate={{
-          y: "0%",
-          opacity:1
-        }}
-        transition={{
-         
-          delay:.5,
-          duration: .6
-        }}>{mainBanner.maindetails} </motion.p >
+       <h2 >{mainBanner.title}</h2>
+        <p>{mainBanner.maindetails} </p >
      </div>
     <div className='main-container'>
      
