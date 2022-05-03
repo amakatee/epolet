@@ -512,6 +512,10 @@ a {
 }
 /*condidentikal ends */
 @media(max-width: 35em) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+  
   .about-single-child h1{
     font-size: 1.3rem;
     letter-spacing: .7px;

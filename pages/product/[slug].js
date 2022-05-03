@@ -2,6 +2,7 @@ import React from 'react'
 import { client, urlFor } from '../../lib/client'
 import { useState } from 'react'
 import { useContext } from 'react'
+import Head from 'next/head'
 
 
 import CartContext from '../../context/StateContext'
@@ -12,7 +13,7 @@ const {image, name, details, slug} = product
   const { show, setShow, index, setIndex, closeImg} = useContext(CartContext)
   const [idP, setIdP ] = useState(null)
   const existingImg = image.find((item, i) => i === index )
-  console.log(product)
+  console.log(`id ${product._id}`)
   
  
   const openImg = (i) => {
@@ -40,6 +41,11 @@ const {image, name, details, slug} = product
 
   return (
     <div className= {slug.current === 'integralnyi-ppu-light' ? 'light product-detail-section' : 'dark product-detail-section'}>
+      <Head>
+        <title> {name} - Эполет</title>
+        <meta name='description' content={details}></meta>
+        <meta property='og:title' content={`${name} - Эполет`}></meta>
+      </Head>
     
       <div className='product-cart '> 
      { show && <div onClick={() => closeImg()} className='over-lay'></div>}
