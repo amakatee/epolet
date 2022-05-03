@@ -2,6 +2,7 @@ import React from 'react'
 import {FaAnchor} from 'react-icons/fa'
 import {AiOutlineCopyrightCircle} from 'react-icons/ai'
 import {AiFillThunderbolt} from 'react-icons/ai'
+import {HiLightBulb} from 'react-icons/hi'
 
 const AboutUs = ({aboutBanner}) => {
    console.log(aboutBanner.aboutArray[1].titles)
@@ -25,7 +26,7 @@ const AboutUs = ({aboutBanner}) => {
            <h3>{aboutBanner.aboutArray[1] ? aboutBanner.aboutArray[1].description : 'Изготовление изделий любой сложности'}</h3>
         </div>
         <div className='about-single-child'> 
-        <AiFillThunderbolt  size={45}/>
+        <HiLightBulb  size={45}/>
            <h1>{aboutBanner.aboutArray[2] ? aboutBanner.aboutArray[2].titles : 'Отличительная черта'}</h1> 
            <h3>{aboutBanner.aboutArray[2] ? aboutBanner.aboutArray[2].description : 'Гарантия качества на протяжении 20 лет'}</h3>
         </div>
