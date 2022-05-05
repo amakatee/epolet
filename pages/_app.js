@@ -11,6 +11,11 @@ export const theme = createTheme({
   palette: {
     secondary: {
       main: amber[400],
+      
+    },
+    primary: {
+      main: amber[50],
+
     }
   }
 })

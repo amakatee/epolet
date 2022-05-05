@@ -13,9 +13,9 @@ const Main = ({mainBanner}) => {
     <div className='main-page' id='main'>
       <div className='main-desc'>
        <h2 >{mainBanner.title}</h2>
-        <p>{mainBanner.maindetails} </p >
+        {/* <p>{mainBanner.maindetails} </p > */}
      </div>
-    <div className='main-container'>
+    {/* <div className='main-container'>
      
     <Link to='about' spy={true} smooth={true} duration={500} offset={-150}>
       <div className='h-cont'>
@@ -41,7 +41,7 @@ const Main = ({mainBanner}) => {
       
      
      
-    </div>
+    </div> */}
     {mainBanner?.image  && 
     
     <div className='image-container-div'>

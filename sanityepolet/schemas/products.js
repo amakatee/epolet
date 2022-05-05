@@ -40,7 +40,12 @@ export default {
         {
             name: 'details',
             title:'Описание',
-            type: 'string'
+            type: 'array',
+            of: [
+                {
+                    type:'block'
+                }
+            ]
         }
     ]
 }

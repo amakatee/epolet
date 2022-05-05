@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Helvetica, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family:  Helvetica, -apple-system, Druk Wide Bold ,BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 html {
@@ -18,6 +18,7 @@ html {
   --main-font-color: #fefefa;
   --pane-padding: 5px 42px;
   --yellow-main: #ffca28;
+  --main-dark:#212121;
 
 }
 
@@ -304,73 +305,22 @@ a {
 /* Main end */
 
 /* about US starts*/
+
 .about-section {
   position: relative;
-  padding-block: 3rem;
-  background: black;
-  min-height: 80vh;
-  display: grid;
-  place-content: center;
+ 
+  background-color: var(--yellow-main);
+  background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+
   z-index: 300;
 
 }
-.about {
- 
-  flex-direction: column;
-  align-items: center;
-  width: 80vw;
-  z-index: 40;
-  
-
-}
-.about-child{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
- 
-  gap: 8rem;
-  padding: 3rem;
-  z-index: 40;
-
-}
-
-.about-single-child  {
- 
-  text-align: center;
-  flex: 1;
-  color: var(--main-font-color);
 
 
-}
-.about-single-child > *{
-  margin-bottom: 13px;
-  font-weight: 400;
-  line-height: 1.2rem;
- 
- 
 
-}
 
-.about-single-child h3 {
-  font-size: 1rem;
-  letter-spacing: .5px;
-  font-weight: 250;
-}
-.about-single-child h1 {
-  font-size: 1.7rem;
-  line-height: 1.6rem;
-  letter-spacing: .5px;
-  font-weight: 250;
- 
-}
-.about-title {
-  color: var(--main-font-color);
-  font-weight: 350;
-  letter-spacing: .2px;
-  margin-bottom: 2rem;
- 
-  padding-top: 2rem;
-  text-transform: uppercase;
-}
+
+
 /* about US ends*/
 /*confidentia start  */
 .confidential-cont {
@@ -416,33 +366,52 @@ a {
 
 
 .katalog-section {
-  margin-top: -5px;
+ 
   min-height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-color: #000000;
+  position: relative;
+
+  padding-top: 35vh;
+  padding-bottom: 20vh;
 
  /* background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
  
 }
-.katalog-section h1 {
+.katalog-desc {
+  text-align: start;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  text-align: start;
+  transform: translate(-50%);
+  
+ 
   color: var(--main-font-color);
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  font-size: 2rem;
-  margin-left: 1rem;
- 
-  text-transform: uppercase;
-  font-weight: 300;
- 
-  cursor: pointer;
+  padding-block: 10vh;
 }
+.katalog-desc h1 {
+  font-size: 3rem;
+  margin-bottom: 1.4rem;
+  letter-spacing: .5px;
+  color: var(--yellow-main);
+
+  
+}
+
 .product-detail-section {
   min-height: 100vh;
   padding-top: 18vh;
   width: 100vw;
  
 }
+.product-container {
+  
+
+
+  
+}
+
 /* Product icon */
 /* .product-container {
   color: var(--main-font-color);
@@ -457,14 +426,17 @@ a {
 
 } */
 .productI-card {
-  text-align: center;
-  margin-bottom: 3rem;
+  text-align: start;
+ 
+  padding-block: 2rem;
+
+  
 
 }
 .productI-img {
   max-width: 30rem;
   aspect-ratio: 1.4;
-  padding-bottom: 1.3rem;
+
   cursor: pointer;
 
 }
@@ -475,12 +447,18 @@ a {
   border-radius: 1rem;
 
 }
+.product-desc {
+  width: 80%;
+  margin: auto;
+}
+
 .productI-desc h1 {
   margin-bottom: .7rem;
-  font-weight: 350;
+  font-weight: 400;
   line-height: 1.4;
-  font-size: 1rem;
-  letter-spacing: .6px;
+  font-size: 1.9rem;
+  color: white;
+  letter-spacing: 1.7px;
 }
 .productI-desc p {
   margin-bottom: 1rem;
@@ -489,6 +467,7 @@ a {
   letter-spacing: .1px;
   color: rgba(255, 255, 255, 0.705);
 }
+
 /* Product icon */
 
 .product-cart {
@@ -535,15 +514,17 @@ a {
 }
 .products-desc {
   flex: 1 1 30%;
-  display: grid;
-  place-content: center;
+
+ /* display: grid;
+  place-content: center;*/
+  text-align: start;
   /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; */
   font-weight: 300;
-  letter-spacing: .3px;
-  font-size: .9rem;
+  letter-spacing: .7px;
+  font-size: .99rem;
   padding-inline: 3rem;
   text-align: center;
  min-height: 30rem;
@@ -553,7 +534,9 @@ a {
   color: rgb(34, 31, 31);
   border-radius: 1rem;
 }
-
+.products-desc p {
+  text-align: start;
+}
 .product-carousel {
   position: absolute;
   top: 50%;
@@ -750,6 +733,111 @@ html{
   letter-spacing: .4px;
 
 }
+.about-title-main {
+  color: blue;
+}
+.upper-about-cont {
+  position: relative;
+  width: 100vw;
+  height: 60vh;
+}
+.upper-img {
+  width: 100vw;
+  height: 60vh;
+  z-index: 1;
+  
+}
+.upper-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.upper-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.445);
+  z-index: 4;
+}
+.upper-about-title {
+  position: absolute;
+  text-transform: uppercase;
+  left: 20%;
+  letter-spacing: .7px;
+  font-size: 1.5rem;
+  color-interpolation-filters: #212121;
+
+
+
+
+  top: 60%;
+  z-index: 5;
+  color: var(--main-font-color);
+
+}
+.upper-nav {
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  z-index: 50;
+}
+.navSpan {
+  color: white;
+  font-size: 1.2rem;
+  padding-right: 20px;
+  cursor: pointer;
+  letter-spacing: .8px;
+
+}
+.currentLink {
+  padding-left: 20px;
+  color: rgba(212, 212, 212, 0.836);
+}
+
+.about-route-section {
+  width: 100vw;
+
+  background-color: #000000;
+background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+.about-route-children {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(3,1fr);
+  padding-block: 20vh;
+
+}
+.about-route-children > * {
+  padding: 4.5rem 4rem;
+
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #fff293;
+  cursor: pointer;
+background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%); 
+
+}
+.about-route-children > * h3 {
+  font-weight: 100;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: 1.5rem;
+  
+  
+}
+.about-route-children > * :hover {
+  transform: scale(1.05);
+  transition: all .3s ease-in-out;
+
+}
+
+
 @media(min-width:50) and (max-width: 70em) {
   html {
     overflow-x: hidden;
@@ -779,7 +867,16 @@ html{
 
 }
 @media(min-width:50em) {
-  .mobile-nav-toggle{
+  .product-container-icon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: auto;
+    gap: 4rem;
+   
+  }
+  
+  .-toggle{
     display: none;
   }
   .navbar {
@@ -790,8 +887,101 @@ html{
     transform: scale(1.2);
     padding: 1rem;
   }
+  .main-desc {
+    text-align: start;
+    width: 80vw;
+    margin-inline: auto;
+    color: var(--main-font-color);
+   
+
+    gap: 1rem;
+    z-index: 15;
+  }
+  .main-desc h2{
+    width: 40vw;
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    text-transform: uppercase;
+  
+   
+    
+    line-height: 3.5rem;
+    letter-spacing: 3.6px;
+    font-size: 2.7rem;
+  
+ 
+  
+
+   
+ 
+  }
+  .mobile-nav-toggle {
+    display: none;
+  }
+
+   /* .main-desc p {
+    line-height: 3rem;
+    letter-spacing: .8px;
+    font-size: 1.9rem;
+   } */
+   .about-section {
+    position: relative;
+    padding-block: 3rem;
+    background-color: var(--yellow-main);
+    background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+  
+    z-index: 300;
+  
+  }
+  .about {
+   
+    justify-content:space-around;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+    padding-block: 10vh;
+  
+  
+    
+  
+  }
+  .about > * {
+    flex: 1 1 100%;
+    color: var(--main-dark);
+  }
+  .about-child{
+    font-size: 1.1rem;
+    font-weight: 200;
+    letter-spacing: .6px;
+    line-height: 1.5;
+    margin-bottom: 1.3rem;
+  }
+  .about-logo {
+    font-size: 1.5rem;
+    text-align: start;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: .1px;
+    line-height: 1.2;
+  
+  
+  }
+  .about-nav {
+  
+    text-align: start;
+  }
+  
+  
 }
 @media(max-width:50em) {
+  .product-container-icon {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 4rem;
+  
+  }
   html {
     overflow-x: hidden;
   }
@@ -886,6 +1076,7 @@ html{
   .nav-logo-cont {
    align-items: center;
   }
+
   #logo {
     padding-left: .4em;
     text-transform: uppercase;
@@ -933,6 +1124,35 @@ html{
   /* Product */
   .mainn {
     width: 100vw;
+  }
+  .main-desc {
+    text-align: start;
+    width: 80vw;
+    margin-inline: auto;
+    color: var(--main-font-color);
+   
+
+    gap: 1rem;
+    z-index: 15;
+  }
+  .main-desc h2{
+    width: 58vw;
+    position: absolute;
+    bottom: 13%;
+    left: 5%;
+    text-transform: uppercase;
+  
+   
+    
+    line-height: 1.6rem;
+    letter-spacing: .9px;
+    font-size: 1.1rem;
+  
+ 
+  
+
+   
+ 
   }
   .product-detail-section {
     padding-top: 10vh;
@@ -1037,6 +1257,44 @@ html{
     object-fit: cover;
     border-radius: 1rem;
   }
+  .about-section {
+
+    padding-block: 2rem;
+   
+  
+  
+  
+  }
+  .about {
+    width: 70vw;
+    margin: auto;
+    padding-block: 3rem;
+    color: var(--main-dark);
+  
+  
+    
+  
+  }
+  .about-nav p {
+    padding: 0;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+  }
+ 
+ 
+  .about-child{
+    margin-bottom: 1.5rem;
+
+  }
+  .about-logo {
+    display: none;
+ 
+  
+  
+  }
+
+  
   html{
     width: 100vw;
   }
@@ -1049,8 +1307,102 @@ html{
  /* .productI-card {
    margin-bottom: 4rem;
  } */
+
+ .upper-about-title {
+
+  position: absolute;
+  text-transform: uppercase;
+  left: 10%;
+  letter-spacing: .7px;
+  font-size: 1.1rem;
+
+
+
+
+  top: 63%;
+  z-index: 5;
+  color: var(--main-font-color);
+
+}
+.upper-nav {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  z-index: 50;
+}
+
+.about-route-children {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+  padding-block: 10vh;
+
+}
+
+
+.about-route-children > * {
+  padding: 2.5rem 3rem;
+
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #fff293;
+background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%); 
+
+}
+.katalog-desc {
+  text-align: start;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  text-align: start;
+  transform: translate(-50%);
+  
+ 
+  color: var(--main-font-color);
+  padding-block: 10vh;
+}
+.katalog-desc h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.4rem;
+  letter-spacing: .5px;
+  color: var(--yellow-main);
+
   
 }
+
+.product-detail-section {
+  min-height: 100vh;
+  padding-top: 18vh;
+  width: 100vw;
+ 
+}
+
+}
+/* .about-route-children > * {
+  padding: 1.5rem 1rem;
+
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: #fff293;
+background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%); 
+
+}
+.about-route-children > * h3 {
+  font-weight: 100;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  
+  
+}
+  
+} */
 @media(max-width:35rem){
   .p1-con {
     padding-top: 9vh;
@@ -1059,9 +1411,7 @@ html{
     transform: scale(1.4);
   }
   @media(max-width: 35em) {
-  .mobile-nav-toggle {
-    display: none;
-  }
+  
   
   .about-single-child h1{
     font-size: 1.3rem;
@@ -1153,27 +1503,10 @@ html{
     padding-block: 3rem;
   
   }
-  .mobile-nav-toggle {
-    display: none;
-  }
+ 
   
-  .about-single-child h1{
-    font-size: 1.3rem;
-    letter-spacing: .7px;
-  }
-  .about-single-child h3 {
-    font-size: 1rem;
-    letter-spacing: .7px;
-    font-weight: 300;
-  }
-  .about-child {
-    gap: 5rem;
-  }
-  .about-single-child > * {
-    font-weight: 300;
-    line-height: 1.3rem;
 
-  }
+
   /*Produc Icon starts */
   .productI-card {
     width: 90vw;
@@ -1196,31 +1529,30 @@ html{
    
    
   }
-  .main-desc {
+  /* .main-desc {
     text-align: center;
     
-    font-size: .7rem;
+    
    
     width: 80vw;
     margin-inline: auto;
     color: var(--main-font-color);
     text-align: center;
-    line-height: 1.7rem;
-    letter-spacing: .5px;
-    font-weight: 200;
-    font-size: 1rem;
+    line-height: 2rem;
+    letter-spacing: .6px;
+    font-weight: 300;
+    
   
-    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
-               0px 8px 13px rgba(0,0,0,0.1),
-               0px 18px 23px rgba(0,0,0,0.1);
+    
     
     gap: 1rem;
     z-index: 15;
   }
   .main-desc h2{
     
-    font-size: 1.2rem;
-  }
+    font-size: 1.5rem;
+  } */
+ 
   .main-container{
     margin-top: -10vh;
    width: 740px;
@@ -1246,23 +1578,10 @@ html{
    
    
   }
-  .about-section {
-     z-index: 40;
-  
-  }
-
-  .main-desc  {
-    text-align: center;
-
-    font-size: .7rem
-   
-   
-  } 
-   .main-desc p {
-    font-size: 0.9rem;
-  }
   
 
+
+ 
   .main-image-cont {
     position: absolute;
     top: 0;
@@ -1292,3 +1611,9 @@ html{
   
 
 }
+.bp {
+  background-color: black;
+  padding-block: 14vh;
+}
+
+

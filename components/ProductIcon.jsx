@@ -13,7 +13,7 @@ const ProductIcon = ({product:{image, name, details, slug, coverImg}}) => {
        </div>
        <div className='productI-desc'>
           <h1>{name}</h1>
-          <p>{`${details.substring(0,50)}...`}</p>
+          {/* <p>{`${details.substring(0,50)}...`}</p> */}
        </div>
    
       <Button variant='contained'color='secondary'>Подробнее</Button>

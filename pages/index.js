@@ -6,9 +6,12 @@ import { client } from '../lib/client'
 import AboutUs from '../components/AboutUs'
 import ProductIcon from '../components/ProductIcon'
 import PdfCont from '../components/PdfCont'
+import {Button} from '@mui/material'
+import {useRouter } from 'next/router'
 
 
 export default function Home({products, bannerData}) {
+  const router = useRouter()
 
  
   return (
@@ -22,8 +25,12 @@ export default function Home({products, bannerData}) {
       </div>
 
       <section className='katalog-section'>
-        <h1 >{bannerData.length && bannerData[0].katalogsection || 'Каталог'}</h1>
-        <div className='product-container' id='katalog'>
+        <div className='katalog-desc'>
+        <h1 >Наша продукция</h1>
+        <Button onClick={() => {router.push('/katalog')}}   color="secondary" variant="contained">Перейти в каталог</Button>
+        </div>
+        
+        <div className='product-container-icon' id='katalog'>
           {products?.map(product => <ProductIcon key={product._id} id={product._id} product={product}/>)}
          
         </div>

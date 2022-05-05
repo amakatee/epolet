@@ -6,9 +6,10 @@ import {SiMinutemailer} from 'react-icons/si'
 import { useState } from 'react'
 import { useContext } from 'react'
 import CartContext from '../context/StateContext'
-import{ Link } from 'react-scroll'
+import{ Link } from 'next/link'
 import { client } from '../lib/client'
 import {useRouter } from 'next/router'
+import about from './../pages'
 
 
 
@@ -32,18 +33,21 @@ const Navbar = () => {
        <div className='nav-main-cont flex'>
     
       <div onClick={() => {router.push('/')}} className='nav-logo-cont flex'>
+
         <img className='logo-img' width="58px" src='../ep.png'></img>
         {/* <Link to='main'><h3  id='logo'>Эполет</h3></Link> */}
         <h3  id='logo'>Эполет</h3>
+
+        </div>
       
-        {/* <div id='logo'><EpoletLink /></div>  */}
-      </div>
+       
+    
 
      
         <div id='nav-menu-cont' data-visible={show} className='nav-menu-cont flex'>
-          <div onClick={() => {router.push('/')}} ><Link to='katalog' spy={true}  offset={-150} smooth={true} duration={500}>Каталог</Link></div>
-          <div onClick={() => {router.push('/')}} ><Link to='about' spy={true} smooth={true} duration={500} offset={-150} aria-hidden="true">О Компании</Link></div>
-          <div onClick={() => {router.push('/')}} ><Link to='form'  spy={true} offset={-140} smooth={true} duration={500} aria-hidden="true">Контакты</Link></div>
+          <div onClick={() => {router.push('/katalog')}}> Каталог </div>
+          <div onClick={() => {router.push('/about')}} > О Компании </div>
+          <div onClick={() => {router.push('/contact')}}>Контакты</div>
          
       
         </div>
