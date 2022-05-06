@@ -2,11 +2,18 @@ import React from 'react'
 import Link from 'next/link'
 import { urlFor } from '../lib/client'
 import {Button} from "@mui/material"
+import {motion} from 'framer-motion'
 
 const ProductIcon = ({product:{image, name, details, slug, coverImg}}) => {
   return (
     <Link href={`/product/${slug.current}`}>
-      <div className='productI-card'>
+      <motion.div className='productI-card'
+      whileHover={{
+        scale:1.1,
+        transition:{duration: .4}
+      }}
+      whileTap={{ scale: 0.95 }}
+      >
        
         <div className='productI-img' >
             <img src={urlFor(coverImg && coverImg)} width={250}></img>
@@ -18,7 +25,7 @@ const ProductIcon = ({product:{image, name, details, slug, coverImg}}) => {
    
       <Button variant='contained'color='secondary'>Подробнее</Button>
   
-      </div>
+      </motion.div>
     </Link>
   )
 }

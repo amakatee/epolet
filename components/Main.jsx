@@ -12,7 +12,7 @@ const Main = ({mainBanner}) => {
   return (
     <div className='main-page' id='main'>
       <div className='main-desc'>
-       <h2 >{mainBanner.title}</h2>
+       <motion.h2 initial={{opacity:0, x:-80}} whileInView={{opacity:1, x:0}} transition={{delay:.2}}>{mainBanner.title}</motion.h2>
         {/* <p>{mainBanner.maindetails} </p > */}
      </div>
     {/* <div className='main-container'>

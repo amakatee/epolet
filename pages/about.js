@@ -6,7 +6,7 @@ import {AiOutlineCopyrightCircle} from 'react-icons/ai'
 import {AiFillThunderbolt} from 'react-icons/ai'
 import {HiLightBulb} from 'react-icons/hi'
 import {useRouter } from 'next/router'
-
+import { motion } from 'framer-motion'
 import {BsArrowRight} from 'react-icons/bs'
 
 
@@ -22,7 +22,7 @@ const about = ({bannerData}) => {
               <img width='300px' src='./1.jpg'></img>
             </div>  
             <div className='upper-overlay'></div>
-            <div className='upper-about-title'><h1>{aboutBanner.aboutsection}</h1></div>
+            <motion.div initial={{y:-100, opacity:0}} whileInView={{y:0, opacity:1}} transition={{stiffness:90, damping:100}} className='upper-about-title'><h1>{aboutBanner.aboutsection}</h1></motion.div>
             <div className='upper-nav'>   
             <span onClick={() => {router.push('/')}} className='navSpan'>Главная</span>
             <BsArrowRight color='white'  /> 
@@ -39,22 +39,40 @@ const about = ({bannerData}) => {
            
             <div className='about-route-children' > 
 
-               <div className='about-route-child'>
+               <motion.div 
+                whileHover={{
+                  scale:1.1,
+                  transition:{duration: .4}
+                }}
+                whileTap={{ scale: 0.95 }}
+                className='about-route-child'>
                <FaAnchor size={45} /> 
                <h3>{aboutBanner.aboutArray[0] ? aboutBanner.aboutArray[0].description : 'Гибкое ценообразование'}</h3>
-            </div>
+            </motion.div>
 
 
-            <div className='about-route-child'> 
+            <motion.div 
+             whileHover={{
+              scale:1.1,
+              transition:{duration: .4}
+            }}
+            whileTap={{ scale: 0.95 }}
+            className='about-route-child'> 
               <AiOutlineCopyrightCircle size={45} />
              <h3>{aboutBanner.aboutArray[1] ? aboutBanner.aboutArray[1].description : 'Изготовление изделий любой сложности'}</h3>
-            </div>
+            </motion.div>
 
               
-            <div className='about-route-child'> 
+            <motion.div
+             whileHover={{
+              scale:1.02,
+              transition:{duration: .4}
+            }}
+            whileTap={{ scale: 0.95 }}
+             className='about-route-child'> 
               <HiLightBulb  size={45}/>
                <h3>{aboutBanner.aboutArray[2] ? aboutBanner.aboutArray[2].description : 'Гарантия качества на протяжении 20 лет'}</h3>
-             </div>
+             </motion.div>
             </div>
 
          </div>

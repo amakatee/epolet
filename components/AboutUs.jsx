@@ -6,28 +6,45 @@ import {HiLightBulb} from 'react-icons/hi'
 import {Button} from '@mui/material'
 import Link from 'next/link'
 import {useRouter } from 'next/router'
+import {motion} from 'framer-motion'
 
 const AboutUs = ({aboutBanner}) => {
    const router = useRouter()
    console.log(aboutBanner)
+   const aboutVariant = {
+      hidden:{
+         y: '-100%',
+         opacity: 0
+      
+
+      },
+      visible: {
+         y:100,
+         opacity:1
+        
+      }
+   }
 
 
   return (
   
-    <div className='about flex' id='about' >
-       <div className='about-logo'>
-          <h1>Компания <br /> Эполет</h1>
-       </div>
-       <div className='about-nav'>
-          <p className='about-child'>{aboutBanner.title}</p>
+    <motion.div className='about flex' id='about' >
+       <motion.div   
+       className='about-logo' >
+          <motion.h1 initial={{x:-100}} whileInView={{x:0}} transition={{duration:.2}} >Компания <br /> Эполет</motion.h1>
+       </motion.div>
+       <motion.div 
+       
+       className='about-nav'>
+          <motion.p className='about-child' >{aboutBanner.title}</motion.p>
          <Button onClick={() => {router.push('/about')}} color="primary" variant='contained'>{aboutBanner.aboutsection}</Button>
-       </div>
+       </motion.div>
 
      
 
         
   
-    </div>
+    </motion.div>
   )
 }
 

@@ -6,8 +6,9 @@ import { client } from '../lib/client'
 import AboutUs from '../components/AboutUs'
 import ProductIcon from '../components/ProductIcon'
 import PdfCont from '../components/PdfCont'
-import {Button} from '@mui/material'
+import {Button, duration} from '@mui/material'
 import {useRouter } from 'next/router'
+import { motion } from 'framer-motion'
 
 
 export default function Home({products, bannerData}) {
@@ -24,9 +25,15 @@ export default function Home({products, bannerData}) {
         <AboutUs aboutBanner={bannerData.length && bannerData[0]}/>
       </div>
 
-      <section className='katalog-section'>
+      <motion.section className='katalog-section'>
         <div className='katalog-desc'>
-        <h1 >Наша продукция</h1>
+        <motion.h1 initial={{y:100, opacity:0}} whileInView={{y:0, opacity:1}} 
+        transition={{
+          stiffness:300,
+          delay:.2,
+          duration: .3
+        }}
+        >Наша продукция</motion.h1>
         <Button onClick={() => {router.push('/katalog')}}   color="secondary" variant="contained">Перейти в каталог</Button>
         </div>
         
@@ -35,7 +42,7 @@ export default function Home({products, bannerData}) {
          
         </div>
        
-       </section>
+       </motion.section>
 
      
      

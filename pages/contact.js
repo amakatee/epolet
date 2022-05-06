@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
 import {BsArrowRight} from 'react-icons/bs'
+import { motion } from 'framer-motion'
 
 const contact = () => {
     const router = useRouter()
@@ -11,7 +12,7 @@ const contact = () => {
               <img width='300px' src='./2.jpg'></img>
             </div>  
             <div className='upper-overlay'></div>
-            <div className='upper-about-title'><h1>Контакты</h1></div>
+            <motion.div initial={{y:-100, opacity:0}} whileInView={{y:0, opacity:1}} transition={{stiffness:90, damping:100}} className='upper-about-title'><h1>Контакты</h1></motion.div>
             <div className='upper-nav'>   
             <span onClick={() => {router.push('/')}} className='navSpan'>Главная</span>
             <BsArrowRight color='white'  /> 

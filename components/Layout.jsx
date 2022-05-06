@@ -2,8 +2,12 @@ import React from 'react'
 import Head from 'next/head'
 import Navbar from './Navbar'
 import Footer from './Footer'
+import {useTransform, motion, useViewportScroll} from 'framer-motion'
+
 
 const Layout = ({children}) => {
+  const {scrollY} = useViewportScroll()
+  const offsetY = [0, 300]
   return (
     <div className='layout'>
       <Head>
@@ -15,7 +19,7 @@ const Layout = ({children}) => {
         <link rel="icon" href="/ep.png" />
       </Head>
       <header className='navbar'>
-        <Navbar />
+        <Navbar offsetY={offsetY} scrollY={scrollY} />
       </header>
       <main className='mainn'>
         {children}

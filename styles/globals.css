@@ -110,7 +110,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding-inline: 5rem;
-  padding-bottom: .6rem;
+  padding-bottom: .0rem;
   border-bottom: 1px solid rgba(71, 68, 68, 0.082);
  
 }
@@ -146,7 +146,9 @@ a {
 .nav-menu-cont > * {
   padding-left: 2.5rem;
   cursor: pointer;
-}
+
+  text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.616), 
+  0px -4px 4px rgba(255,255,255,0.3);}
 .nav-menu-cont > * a {
   color: var(--main-font-color);
   font-weight: 300;
