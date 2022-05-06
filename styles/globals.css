@@ -876,9 +876,7 @@ background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%);
    
   }
   
-  .-toggle{
-    display: none;
-  }
+ 
   .navbar {
     backdrop-filter: blur(1rem);
   }
@@ -916,7 +914,7 @@ background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%);
    
  
   }
-  .mobile-nav-toggle {
+  .mobile-nav-t {
     display: none;
   }
 
@@ -1016,7 +1014,8 @@ background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%);
     border: 0;
     outline: 0;
     }
-  .mobile-nav-toggle{
+  /* .mobile-nav-toggle{
+  display: block !important;
     position: absolute;
     background-color: none;
     border: none;
@@ -1025,14 +1024,26 @@ background-image: linear-gradient(315deg, #fff293 0%, #ffe884 74%);
     width: 2rem;
     transform: scale(.7);
     background-repeat: no-repeat;
-    background-repeat: no-repeat;
+    
     z-index: 9999;
     cursor: pointer;
+  } */
+  .mobile-nav-t{
+     width: 2rem;
+     z-index: 9999;
+     cursor: pointer;
+     aspect-ratio: 1;
+     background: url(../public/icons8-menu.svg);
+     background-repeat: no-repeat;
+     transform: scale(.7);
+     background-color: none;
+     border: none;
   }
-  .mobile-nav-toggle[aria-expanded = 'true']{
+  .mobile-nav-t[aria-expanded = 'true']{
     background: url(../public/icons8-multiply-50.png);
     width: 3rem;
   }
+ 
   .navbar {
     background-color: #0000002d;
     background-image: linear-gradient(147deg, #00000038 0%, #2c3e505e 74%);

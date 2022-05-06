@@ -3,6 +3,7 @@ import { client, urlFor } from '../../lib/client'
 import { useState } from 'react'
 import { useContext } from 'react'
 import Head from 'next/head'
+import {PortableText} from '@portabletext/react'
 
 
 import CartContext from '../../context/StateContext'
@@ -43,7 +44,7 @@ const {image, name, details, slug} = product
     <div className= {slug.current === 'integralnyi-ppu-light' ? 'light product-detail-section' : 'dark product-detail-section'}>
       <Head>
         <title> {name} - Эполет</title>
-        <meta name='description' content={details}></meta>
+        <meta name='description' content=''></meta>
         <meta property='og:title' content={`${name} ППУ - Эполет`}></meta>
       </Head>
     
@@ -52,7 +53,8 @@ const {image, name, details, slug} = product
         <ProductGridImg tapBack={tapBack} tapForward={tapForward}  image={image} existingImg={existingImg} openImg={openImg}/>
         <div className='products-desc'>
           <h1 className='product-title'>{name}</h1> <br/>
-          <p>{details}</p>
+          {/* <p>{details}</p> */}
+          <p><PortableText value={details} /></p>
         </div>
 
    

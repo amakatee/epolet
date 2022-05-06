@@ -51,7 +51,7 @@ const Navbar = () => {
          
       
         </div>
-    <button onClick={(e) => toggleNav()} className='mobile-nav-toggle' aria-controls='nav-menu-cont' aria-expanded={show}><span className='sr-only'></span></button>
+    <button onClick={(e) => toggleNav()} className='mobile-nav-t' aria-controls='nav-menu-cont' aria-expanded={show}><span className='sr-only'></span></button>
      
     </div>
     </div>
