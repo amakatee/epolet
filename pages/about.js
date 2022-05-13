@@ -8,31 +8,19 @@ import {HiLightBulb} from 'react-icons/hi'
 import {useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import {BsArrowRight} from 'react-icons/bs'
-
+import HeaderSection from '../components/HeaderSection'
 
 const about = ({bannerData}) => {
     const aboutBanner = bannerData.length && bannerData[0]
     const router = useRouter()
+    console.log(aboutBanner.titleAbout)
     
    
   return (
       <div>
-          <div className='upper-about-cont'>
-            <div className='upper-img'>
-              <img width='300px' src='./1.jpg'></img>
-            </div>  
-            <div className='upper-overlay'></div>
-            <motion.div initial={{y:-100, opacity:0}} whileInView={{y:0, opacity:1}} transition={{stiffness:90, damping:100}} className='upper-about-title'><h1>{aboutBanner.aboutsection}</h1></motion.div>
-            <div className='upper-nav'>   
-            <span onClick={() => {router.push('/')}} className='navSpan'>Главная</span>
-            <BsArrowRight color='white'  /> 
-            <span className='navSpan currentLink'>О компании</span>
-            </div>
-          </div>
-          
-          {/* <UpperMenu aboutBanner={aboutBanner} /> */}
+        <HeaderSection imageURL={aboutBanner.imageAbout} mainText={aboutBanner.aboutsection} currentPage={aboutBanner.titleAbout} />
+    
        
-
           <div className='about-route-section'  >
 
      

@@ -743,11 +743,11 @@ html{
 .upper-about-cont {
   position: relative;
   width: 100vw;
-  height: 60vh;
+  height: 70vh;
 }
 .upper-img {
   width: 100vw;
-  height: 60vh;
+  height: 70vh;
   z-index: 1;
   
 }
@@ -771,7 +771,7 @@ html{
   left: 20%;
   letter-spacing: .7px;
   font-size: 1.5rem;
-  color-interpolation-filters: #212121;
+  /* color-interpolation-filters: #212121; */
 
 
 

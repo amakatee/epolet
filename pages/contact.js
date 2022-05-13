@@ -2,25 +2,31 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import {BsArrowRight} from 'react-icons/bs'
 import { motion } from 'framer-motion'
+import HeaderSection from '../components/HeaderSection'
+import { client } from '../lib/client'
 
-const contact = () => {
+const contact = ({bannerData}) => {
+  const contactBanner = bannerData.length && bannerData[0]
     const router = useRouter()
+    console.log(contactBanner)
   return (
     <div>
-        <div className='upper-about-cont'>
-            <div className='upper-img'>
-              <img width='300px' src='./2.jpg'></img>
-            </div>  
-            <div className='upper-overlay'></div>
-            <motion.div initial={{y:-100, opacity:0}} whileInView={{y:0, opacity:1}} transition={{stiffness:90, damping:100}} className='upper-about-title'><h1>Контакты</h1></motion.div>
-            <div className='upper-nav'>   
-            <span onClick={() => {router.push('/')}} className='navSpan'>Главная</span>
-            <BsArrowRight color='white'  /> 
-            <span className='navSpan currentLink'>Контакты</span>
-            </div>
-          </div>
+      <HeaderSection imageURL={contactBanner.imageContacts} mainText={contactBanner.titleContats} currentPage={contactBanner.titleContats}  />
+
     </div>
   )
+}
+export const getStaticProps = async () => {
+   
+  const bannerQuery = '*[_type == "banner"]'
+
+  const bannerData = await client.fetch(bannerQuery)
+ 
+
+  return {
+    props: {bannerData}
+  }
+
 }
 
 export default contact
