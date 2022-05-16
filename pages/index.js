@@ -27,12 +27,8 @@ export default function Home({products, bannerData}) {
 
       <motion.section className='katalog-section'>
         <div className='katalog-desc'>
-        <motion.h1 initial={{y:100, opacity:0}} whileInView={{y:0, opacity:1}} 
-        transition={{
-          stiffness:300,
-          delay:.2,
-          duration: .3
-        }}
+        <motion.h1 initial={{x:-80, opacity:0}} whileInView={{x:0, opacity:1}} 
+        transition={{duration:.9, delay:.2}}
         >Наша продукция</motion.h1>
         <Button onClick={() => {router.push('/katalog')}}   color="secondary" variant="contained">Перейти в каталог</Button>
         </div>

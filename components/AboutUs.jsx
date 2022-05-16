@@ -31,12 +31,12 @@ const AboutUs = ({aboutBanner}) => {
     <motion.div className='about flex' id='about' >
        <motion.div   
        className='about-logo' >
-          <motion.h1 initial={{x:-100}} whileInView={{x:0}} transition={{duration:.2}} >Компания <br /> Эполет</motion.h1>
+          <motion.h1 initial={{x:-20, opacity: 0}} whileInView={{x:0, opacity: 1}} transition={{duration:.9}} >Компания <br /> Эполет</motion.h1>
        </motion.div>
        <motion.div 
        
        className='about-nav'>
-          <motion.p className='about-child' >{aboutBanner.title}</motion.p>
+          <motion.p className='about-child' >{aboutBanner.maindetails}</motion.p>
          <Button onClick={() => {router.push('/about')}} color="primary" variant='contained'>{aboutBanner.aboutsection}</Button>
        </motion.div>
 

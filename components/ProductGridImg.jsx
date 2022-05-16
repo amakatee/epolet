@@ -2,6 +2,7 @@ import React from 'react'
 import { urlFor } from '../lib/client'
 import { useContext } from 'react'
 import CartContext from '../context/StateContext'
+import {AiOutlineClose} from 'react-icons/ai'
 import {MdArrowForwardIos, MdArrowBackIosNew} from 'react-icons/md'
 import { motion } from 'framer-motion'
 const ProductGridImg = ({image, existingImg, tapBack, tapForward, openImg}) => {
@@ -25,7 +26,8 @@ const ProductGridImg = ({image, existingImg, tapBack, tapForward, openImg}) => {
           )
         })}
        { show && <div className='product-carousel'>
-         <button onClick={() => closeImg()}  className='carousel-close-button'></button>
+         <div onClick={() => closeImg()}  className='carousel-close-button'><AiOutlineClose color="#fff" size={40} /></div>
+         {/* <button onClick={() => closeImg()}  className='carousel-close-button'></button> */}
         <MdArrowBackIosNew className='arrowBack' onClick={() => tapBack()} color='#fefefa' 
         
          size={40} />
