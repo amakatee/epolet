@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import HeaderSection from '../components/HeaderSection'
 import { client } from '../lib/client'
 
+
 const contact = ({bannerData}) => {
   const contactBanner = bannerData.length && bannerData[0]
     const router = useRouter()
