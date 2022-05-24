@@ -17,7 +17,11 @@ export default function Home({products, bannerData}) {
  
   return (
     <>
-    
+     <Head>
+     <title>Изделия из ППУ - Эполет</title>
+     <meta name="description" content="Компания Эполет специализируется на производстве изделий из мягкого, жесткого и интегрального пенополиуретана."/>
+     <link rel="icon" href="/ep.png"  type='image/x-icon'/>
+     </Head>
      <section className='main-section' >
       <Main mainBanner={bannerData.length && bannerData[0]}/>
       </section> 

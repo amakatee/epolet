@@ -18,6 +18,12 @@ const pdf1 = () => {
    
 
   return (
+    <>
+    <Head>
+     <title>СОУТ - Эполет</title>
+     <meta name="description" content="Компания Эполет специализируется на производстве изделий из мягкого, жесткого и интегрального пенополиуретана."/>
+     <link rel="icon" href="/ep.png"  type='image/x-icon'/>
+     </Head>
     <div className='p1-con'>
     <div className='pdf1-doc'>
         <Document file='/assetspdf/svodnaya.pdf' onLoadSuccess={onDocumnetSuccessLoad}>
@@ -40,6 +46,7 @@ const pdf1 = () => {
 
     </div>
     </div>
+    </>
   )
 }
 

@@ -16,7 +16,8 @@ const Layout = ({children}) => {
         <meta propery="og:title" content='Заливка эластичного, жесткого, интегрального пенополиуретана - Эполет'></meta>
         <meta name="keywords" content="Интегральный ппу Жесткий ппу Пена для матраса купить Поролон с памятью Лист для фрезеровки Подлокотники для офисных кресел Подлокотники для игровых кресел Подлокотник из ппу Автокресло из ппу Эластичный ппу Форма для ппу Кресло из ппу" />
         <meta name="yandex-verification" content="9ec83ae61756bb79" />
-        <meta name="google-site-verification" content="qOh-BE-b0Wza7g3_rzejubyBJcqZpwLJbxq2WOJAY0c" />        <link rel="icon" href="/ep.png" />
+        <meta name="google-site-verification" content="qOh-BE-b0Wza7g3_rzejubyBJcqZpwLJbxq2WOJAY0c" />        
+        <link rel="icon" href="/ep.png"  type='image/x-icon'/>
       </Head>
       <header className='navbar'>
         <Navbar offsetY={offsetY} scrollY={scrollY} />

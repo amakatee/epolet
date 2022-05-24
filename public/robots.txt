@@ -1,5 +1,14 @@
 # *
 User-agent: *
+Disallow: /galierieia
+Disallow: /services
+Disallow: /contacts
+Disallow: /index_2
+Disallow: /price
+
+
+# *
+User-agent: *
 Allow: /
 
 # Host
